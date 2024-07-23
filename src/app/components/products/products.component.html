@@ -1,0 +1,23 @@
+<div class="product p-2"  >
+  <img [src]="data.image" class="w-100" [alt]="data.title" height="150px">
+  <p  class="text-danger" >{{data.category}}</p>
+  <p  class="h6" >{{data.title.split(" ").slice(0,2).join(" ")}}</p>
+<div class="d-flex align-items-center justify-content-between ">
+<span>{{data.price}}EGP</span>
+<div>
+  <i class="fas fa-star rating-color"></i>
+  <span class="text-muted">
+    {{data.rating.rate}}
+  </span>
+</div>
+</div>
+
+<button class="btn btn-success w-100" *ngIf="!addButton" (click)="addButton = true" >Add To Cart</button>
+<div class="d-flex " *ngIf="addButton">
+    <input type="number" class="form-contro w-100" [(ngModel)]="amount">
+    <button class="btn btn-danger" (click)="add();addButton = false">Add</button>
+</div>
+
+<button  class="btn btn-main w-100 mt-2" (click)="viewDetails(data.id)">View Details</button>
+</div>
+ 

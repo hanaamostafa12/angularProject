@@ -1,0 +1,27 @@
+  <app-spinner *ngIf="loading" class="w-100 text-center bg-danger" ></app-spinner>
+<div class="row py-4">
+  <div class="col-2" *ngIf="!loading" >
+    <img [src]="product.image" class="w-100" alt="Product Image">
+  </div>
+  <div class="col-8">
+    
+  
+        <h2 class="h4 fw-bolder mb-2 ">{{ product.title }}</h2>
+        <h6 class="h2 text-muted" >
+          {{ product.category }}
+        </h6>
+        <p class="text-muted pt-3">{{ product.description }}</p>
+    
+        <div class="d-flex align-items-center justify-content-between ">
+          <span>{{product.price}}EGP</span>
+          <div>
+            <i class="fas fa-star rating-color"></i>
+            <span class="text-muted">
+              {{product.rating.rate}}
+            </span>
+          </div>
+
+
+    </div>
+  </div>
+

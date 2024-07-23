@@ -1,0 +1,30 @@
+
+<app-mainSlider></app-mainSlider>
+<div class="select-container ">
+  <label for="product-select">Categories:</label>
+  <select id="product-select" (change)="filtercat($event)" >
+    <option value="all" selected> All</option>
+    <option value="{{item}}" *ngFor="let item of categories">{{item}}</option>
+  </select>
+</div>
+ <div>
+  <input [(ngModel)]="searchTerm" type="text" class="form-control w-75 m-auto" placeholder="search by name...">
+ </div>
+
+<h2>
+  Popular Products
+</h2>
+
+  <app-spinner class="w-100 bg-danger text-center" *ngIf="loading" >  </app-spinner>
+<div class="row g-4" *ngIf="!loading" >
+ 
+  <div  class="col-md-2" *ngFor="let item of products.slice(0,12)|search:searchTerm ">
+  <app-products [data]="item" (item)="addToCart($event)" ></app-products>
+ 
+
+    
+  </div>
+ </div>
+
+ 
+

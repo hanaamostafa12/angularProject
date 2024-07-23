@@ -1,0 +1,35 @@
+<section class="w-75 p-4 bg-main-light rounded my-3 mx-auto">
+  <h1>Login Now</h1>
+  <form  [formGroup]="registerForm" (ngSubmit)="handleRegister()" >
+
+
+      <div  class="mb-2" >
+        <label for="name">username:</label>
+        <input id="username" class="form-control" formControlName="username" type="text" #inputName>
+        <div class="alert alert-danger" *ngIf="registerForm.get('username')?.errors&& (registerForm.get('username')?.touched || inputName.value.length > 0)"  > 
+              <p *ngIf="registerForm.get('username')?.getError('required')" >username is Required</p>
+              <p  *ngIf="registerForm.get('username')?.getError('minlength')">username  minLength 5</p>
+              <p *ngIf="registerForm.get('username')?.getError('maxlength')">username  maxLength 20</p>
+        </div>
+    </div>
+      <div  class="mb-2" >
+        <label for="password">password:</label>
+        <input id="password" class="form-control" formControlName="password" type="password" #inputPassword>
+        <div class="alert alert-danger" *ngIf="registerForm.get('password')?.errors&& (registerForm.get('password')?.touched|| inputPassword.value.length > 0)"  > 
+        <p *ngIf="registerForm.get('password')?.getError('required')" >password is Required</p>
+        <!-- <p  *ngIf="registerForm.get('password')?.getError('pattern')">"must be * Start with a letter (either uppercase or lowercase). * Be between 6 and 9 characters in total. * Can only contain letters (A-Z or a-z) and numbers (0-9)"</p> -->
+        </div>
+    </div>
+
+
+<button  class="btn-main ms-auto d-block" [disabled]="registerForm.invalid">
+  <i *ngIf="isLoading " class="fas fa-spinner fa-spin" ></i>
+  Login
+
+
+</button>
+
+<p *ngIf="msgError" class="alert alert-danger">  {{msgError}}</p>
+
+  </form>
+</section>

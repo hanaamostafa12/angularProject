@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-family) !important;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  transition: unset !important;
+}
+
+.active-link {
+  background-color: var(--main-color) !important;
+  color: var(--light-color) !important;
+  border-radius: 5px;
+}
+
+.rating-color {
+  color: var(--rating-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.product {
+  border-radius: 5px;
+  border: solid 1px var(--main-color);
+  transition: box-shadow 0.5s;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow: 0 0 10px #11bd1168;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+
+.btn-main {
+  background-color: var(--main-color);
+  padding: 7px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn-main:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.btn-main:disabled:hover {
+  background-color: #ccc;
+}
+
+.btn-main:hover {
+  background-color: #11bd11;
+}
+
+body.dark-mode {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode * {
+  background-color: #000000 !important; /* Black background for all components in dark mode */
+  color: #ffffff !important; /* White text for all components in dark mode */
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+  background-color: #000000 !important; /* Dark background for navbar and footer in dark mode */
+}
+
+body.dark-mode .navbar .nav-link,
+body.dark-mode .footer a,
+body.dark-mode a {
+  color: #ffffff !important; /* White text for links in various components in dark mode */
+}
+
+body.dark-mode .form-control {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #ffffff !important; /* White text for placeholders in dark mode */
+}
+
+body.dark-mode .select-container select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .select-container select::placeholder {
+  color: #ffffff !important; /* White text for placeholders in dark mode */
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #ffffff !important; /* White text for input and textarea placeholders in dark mode */
+}
+
+body.dark-mode .active-link {
+  background-color: var(--main-color) !important;
+  color: var(--light-color) !important;
+}
+
+.dark-mode-icon {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  cursor: pointer;
+}

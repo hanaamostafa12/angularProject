@@ -1,0 +1,35 @@
+/* Custom Styles */
+.bg-main-light {
+    background-color: #f8f9fa; /* Light grey background */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Custom primary color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alert {
+    font-size: 0.875rem; /* Smaller font size for alerts */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  input:focus {
+    border-color: #007bff; /* Highlight input borders on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  

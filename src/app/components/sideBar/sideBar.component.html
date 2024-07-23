@@ -1,0 +1,6 @@
+<!-- side-bar.component.html -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleSidebar()">&times;</a>
+  <a *ngFor="let category of categories" href="#">{{ category }}</a>
+</div>
+<button (click)="toggleSidebar()">☰ Open Sidebar</button>

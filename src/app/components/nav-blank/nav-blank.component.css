@@ -1,0 +1,10 @@
+/* Add this to your existing CSS */
+body.dark-mode .navbar {
+    background-color: #333 !important; /* Dark background for the navbar in dark mode */
+    color: #ffffff !important; /* White text for the navbar in dark mode */
+  }
+  
+  body.dark-mode .navbar .nav-link {
+    color: #ffffff !important; /* White text for navbar links in dark mode */
+  }
+  
